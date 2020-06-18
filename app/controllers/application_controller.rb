@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   get "/" do
     erb :welcome
   end
-  
+
   get "/ice_creams" do #show all ice cream flavors
     erb :"ice_creams/index"
   end
@@ -20,6 +20,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/ice_creams" do #create new flavor
+    IceCream.create(params)
+    binding.pry
   end
 
   get "/ice_creams/:id" do #displays ice cream flavor based on ID in URL

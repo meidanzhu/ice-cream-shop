@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20200618182836) do
 
-  create_table "icecreams", force: :cascade do |t|
+  create_table "ice_creams", force: :cascade do |t|
     t.string  "flavor"
     t.integer "rating"
     t.string  "topping"
